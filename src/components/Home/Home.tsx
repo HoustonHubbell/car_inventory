@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { styled } from '@mui/system';
 import {Button} from '@mui/material';
-import alexcars from '../../assets/images/alexcars.jpg'
+import coin from '../../assets/images/coin.jpg'
 
 interface Props{
     title: string;
@@ -44,7 +44,7 @@ const NavA = styled(Link)({
 })
 
 const Main = styled('main')( {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${alexcars});`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${coin});`,
     width: '100%',
     height: '100%',
     backgroundSize: 'cover',
@@ -67,7 +67,7 @@ export const Home = (props:Props) => {
         <Root>
             <NavbarContainer>
                 <Logo>
-                    <LogoA href='#'>Ranger Cars</LogoA>
+                    <LogoA href='#'>Crypto Cats</LogoA>
                 </Logo>
                 <LogoNavigation>
                     <li>
@@ -84,8 +84,8 @@ export const Home = (props:Props) => {
             <Main>
                 <MainText>
                     <h1>{props.title}</h1>
-                    <p>All your cars are here</p>
-                    <Button color='primary' variant='contained' component={Link} to='/dashboard'>See the Cars</Button>
+                    <p>All your coins are here</p>
+                    <Button color='primary' variant='contained' component={Link} to='/dashboard'>See the Coins</Button>
                 </MainText>
             </Main>
 
