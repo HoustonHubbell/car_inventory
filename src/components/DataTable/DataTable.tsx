@@ -98,7 +98,9 @@ export const DataTable =  () => {
           pageSize={5}
           rowsPerPageOptions={[5]}
           checkboxSelection
-          disableSelectionOnClick
+          onSelectionModelChange={(newSelectionModel) => { setData(newSelectionModel); }}
+                {...coinData}
+
         />
         <Button onClick={handleOpen} color='primary'>Update</Button>
         <Button onClick={deleteData} color='warning'>Delete</Button>

@@ -2,7 +2,7 @@ let token = '8720762e7add6f792d62bb2346a89e3cbcabe3959d4ce06e'
 
 export const serverCalls = {
     get: async () => {
-        const response = await fetch(`http://127.0.0.1:5000/`,{
+        const response = await fetch(`http://127.0.0.1:5000/api/coins`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ export const serverCalls = {
     },
 
     create: async(data: any = {}) => {
-        const response = await fetch(`http://127.0.0.1:5000/`,{
+        const response = await fetch(`http://127.0.0.1:5000/api/coins`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export const serverCalls = {
     },
 
     update: async (id:string, data:any = {}) => {
-        const response = await fetch(`http://127.0.0.1:5000/${id}`, {
+        const response = await fetch(`http://127.0.0.1:5000/api/coins/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export const serverCalls = {
     },
 
     delete: async(id:string) => {
-        const response = await fetch(`http://127.0.0.1:5000/${id}`,{
+        const response = await fetch(`http://127.0.0.1:5000/api/coins/${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
